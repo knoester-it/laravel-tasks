@@ -43,15 +43,15 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        'mysql' => 
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('app-images-test-server.mysql.database.azure.com'),
-            'port' => env('3306'),
-            'database' => env('app-images-test-database'),
-            'username' => env('ylydvttmzx'),
-            'password' => env('7STS81T06D4Z1R8R$'),
-            'unix_socket' => env('DB_SOCKET'),
+            'host' => env('app-images-test-server.mysql.database.azure.com', '127.0.0.1'),
+            'port' => env('3306', '3306'),
+            'database' => env('app-images-test-database', 'forge'),
+            'username' => env('ylydvttmzx', 'forge'),
+            'password' => env('7STS81T06D4Z1R8R$', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -61,7 +61,7 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
-        ],
+        ,
 
         'pgsql' => [
             'driver' => 'pgsql',
