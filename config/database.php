@@ -47,7 +47,7 @@ return [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('app-images-test-server.mysql.database.azure.com'),
-            'port' => env('3306', '3306'),
+            'port' => env('3306'),
             'database' => env('app-images-test-database'),
             'username' => env('ylydvttmzx'),
             'password' => env('7STS81T06D4Z1R8R$'),
